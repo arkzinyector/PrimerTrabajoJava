@@ -1,0 +1,93 @@
+/**
+ * 
+ * Programa: Calculo de factura de productos
+ * Fecha: 03 Abril 2023
+ * Autor: Angel Davis Mero Mero
+ * 
+ **/
+
+import javax.swing.JOptionPane;
+public class CalculoDeFactura
+{
+
+  public static void main (String[]args)
+  {
+    String OpcionUno, OpcionDos, OpcionTres, OpcionCuatro, OpcionCinco,
+      Factura = "";
+      System.out.println ("Distribuidora Titan");
+    double CanTotArroz, CanTotAzucar, CanTotAtun, CanTotFideo,
+      CanTotDetergente;
+    double Arroz = 0.35;
+    double Azucar = 0.50;
+    double Atun = 0.99;
+    double Fideo = 0.50;
+    double Detergente = 1;
+    double CantidadArroz, CantidadAzucar, CantidadAtun, CantidadFideo,
+      CantidadDetergente, Subtotal, IVA, Total;
+    //Inicio Cantidad Arroz
+      OpcionUno =
+      JOptionPane.
+      showInputDialog ("Ingrese las libras de arroz que desea comprar");
+      CantidadArroz = Float.parseFloat (OpcionUno);
+      CanTotArroz = CantidadArroz * Arroz;
+    //Fin Cantidad Arroz
+    //Inicio Cantidad Azucar
+      OpcionDos =
+      JOptionPane.
+      showInputDialog ("Ingrese las libras de arroz que desea comprar");
+      CantidadAzucar = Float.parseFloat (OpcionUno);
+      CanTotAzucar = CantidadAzucar * Azucar;
+    //Fin Cantidad Azucar
+    //Inicio Cantidad Atun
+      OpcionTres =
+      JOptionPane.
+      showInputDialog ("Ingrese las libras de arroz que desea comprar");
+      CantidadAtun = Float.parseFloat (OpcionUno);
+      CanTotAtun = CantidadAtun * Atun;
+    //Fin Cantidad Atun
+    //Inicio Cantidad Fideo
+      OpcionCuatro =
+      JOptionPane.
+      showInputDialog ("Ingrese las libras de arroz que desea comprar");
+      CantidadFideo = Float.parseFloat (OpcionUno);
+      CanTotFideo = CantidadFideo * Fideo;
+    //Fin Cantidad Fideo
+    //Inicio Cantidad Detergente
+      OpcionCinco =
+      JOptionPane.
+      showInputDialog ("Ingrese las libras de arroz que desea comprar");
+      CantidadDetergente = Float.parseFloat (OpcionUno);
+      CanTotDetergente = CantidadDetergente * Detergente;
+    //Fin Cantidad Detergente
+    //Inicio Calculos
+      Subtotal =
+      CanTotArroz + CanTotAzucar + CanTotAtun + CanTotFideo +
+      CanTotDetergente;
+      IVA = (Subtotal * 0.12);
+      Total = Subtotal + IVA;
+    //Fin Calculos
+    //Inicio Impresion Factura
+      Factura =
+      Factura + "\n         Nota de venta: Distribuidora Titan      ";
+      Factura =
+      Factura + "\n - Arroz  [" + CantidadArroz + "]    [" + Arroz +
+      "]    [" + CanTotArroz + "]";
+      Factura =
+      Factura + "\n - Azucar  [" + CantidadAzucar + "]    [" + Azucar +
+      "]    [" + CanTotAzucar + "]";
+      Factura =
+      Factura + "\n - Atun  [" + CantidadAtun + "]    [" + Atun + "]    [" +
+      CanTotAtun + "]";
+      Factura =
+      Factura + "\n - Fideo  [" + CantidadFideo + "]    [" + Fideo +
+      "]    [" + CanTotFideo + "]";
+      Factura =
+      Factura + "\n - Detergente  [" + CantidadDetergente + "]    [" +
+      Detergente + "]    [" + CanTotDetergente + "]";
+      Factura = Factura + "\n --> Subtotal:    " + Subtotal;
+      Factura = Factura + "\n --> IVA:    " + IVA;
+      Factura = Factura + "\n --> Total:    " + Total;
+      JOptionPane.showMessageDialog (null, Factura);
+  }
+
+}
